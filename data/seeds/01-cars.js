@@ -1,8 +1,8 @@
 // STRETCH
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex("dealer").truncate(); // reset primary keys
-  await knex("dealer").insert([
+  await knex("cars").truncate(); // reset primary keys
+  await knex("cars").insert([
     {
       vin: "VIN23A3X333885651",
       make: "Honda",

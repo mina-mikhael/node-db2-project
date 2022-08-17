@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("dealer", (tbl) => {
+  return knex.schema.createTable("cars", (tbl) => {
     tbl.increments();
     tbl.text("vin", 17).notNullable().unique();
     tbl.text("make", 100).notNullable();
@@ -15,5 +15,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  knex.schema.dropTableIfExists("dealer");
+  return knex.schema.dropTableIfExists("cars");
 };
