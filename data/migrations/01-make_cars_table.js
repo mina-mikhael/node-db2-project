@@ -5,7 +5,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable("dealer", (tbl) => {
     tbl.increments();
-    tbl.text("vin", 18).notNullable().unique();
+    tbl.text("vin", 17).notNullable().unique();
     tbl.text("make", 100).notNullable();
     tbl.text("model", 100).notNullable();
     tbl.integer("mileage", 100).notNullable();
